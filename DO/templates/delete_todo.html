@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+{{ block.super }}
+<br>
+<section>
+    <form action="" method="post" enctype="multipart/form-data">
+       
+        {% csrf_token %}
+        Are you sure want to delete this item ?
+        <button class="btn btn-outline-danger" type="submit">Delete Todo</button>
+        <a href="/">Cancel</a>
+    </form>
+</section>
+{% endblock %}

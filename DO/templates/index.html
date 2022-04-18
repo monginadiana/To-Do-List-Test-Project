@@ -1,0 +1,32 @@
+
+
+{%extends 'base.html'%}
+{% load static%}
+{% load bootstrap4 %}
+
+{% block content %}
+
+
+{{block.super}}
+
+
+<br>
+
+
+
+<div class="container">
+  <div class="row">
+      {% for items in todo %}
+      <div class="card col-md-4 m-2">
+      <div class="card-body">
+          <h5 class="card-title"><a href="{% url 'single' items.id %}">{{items.name}}</a></h5>
+          <p class="card-text">{{items.description}}</p>
+          <a href="{% url 'single' items.id %}"><button type="button" class="btn btn-primary">View More</button></a>
+      </div>
+  </div>
+{% endfor %}
+  </div>
+</div>
+
+
+{% endblock %}

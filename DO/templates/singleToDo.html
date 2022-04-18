@@ -1,0 +1,41 @@
+{%extends 'base.html'%}
+{% load static%}
+{% block content %}
+
+<style>
+    .single{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 3rem;
+    }
+    .single-card{
+        padding: 3rem 2rem;
+    }
+</style>
+
+{{block.super}}
+
+<!--  -->
+<br>
+<div class="container">
+    <h2  class="text-center">SingleToDO List</h2>
+    <div class="row single">
+    {% for singleitem in todo %}
+        <div class="card single-card">
+            <div class="card-body">
+              <h5 class="card-title">{{singleitem.name}}</a></h5>
+              <p class="card-text"> <p><span>Description:</span> {{singleitem.description}}</p></p>
+              <p class="card-text"> <p><span>category:</span> {{singleitem.category}}</p></p>
+
+              <a href="{% url 'update' singleitem.id %}"><button class="btn btn-primary">Update TODO</button></a>
+                <a href="{% url 'delete_todo' singleitem.id %}"><button class="btn btn-danger">DELETE TODO</button></a>
+            </div>
+        </div> 
+    </div>
+
+</div>
+
+{% endfor %}
+
+{% endblock %}
