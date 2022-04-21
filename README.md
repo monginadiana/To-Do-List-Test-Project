@@ -19,11 +19,11 @@ https://atomichabbits.herokuapp.com/
   
 ##### Clone the repository:  
  ```bash 
- git@github.com:ezekielkibiego/The_Neighborhood.git
+https://github.com/monginadiana/To-Do-List-Test-Project.git
 ```
 ##### Navigate into the folder and install requirements  
  ```bash 
-cd The_Neighborhood
+cd To-D0-List
 ```
 ##### Install and activate Virtual  
  ```bash 
